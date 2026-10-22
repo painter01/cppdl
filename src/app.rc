@@ -1,0 +1,9 @@
+// cppdl 资源脚本：把 ico 图标嵌入 exe
+// RC 编译器工作目录默认就是 .rc 文件所在目录，因此这里直接引用同目录下的 cppdl.ico
+#define IDI_APPICON 101
+
+IDI_APPICON ICON "cppdl.ico"
+
+// 视觉样式 manifest（comctl32 v6 + Per-Monitor DPI）在 CMakeLists.txt 中以
+// app.manifest 源文件形式交给 CMake 嵌入（/MANIFESTINPUT），避免与链接器
+// 自动生成的默认 manifest 重复。
